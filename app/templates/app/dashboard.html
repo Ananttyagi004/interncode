@@ -1,0 +1,36 @@
+{% extends 'app/index.html' %}
+{% load static %}
+{% block content %} 
+
+
+    <div class="col-lg-5 text-white p-4 mx-auto bg-dark ">
+        <div class="alert  alert-danger">
+           <h2> DASHBOARD</h2>
+        </div>
+        <div class=" shadow p-12 mx-auto">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 offset-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="{{user.profile_picture}}" class="img-fluid rounded-circle shadow" alt="Profile Picture">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+   <p> {{user.email}}</p>
+   <p>{{user.first_name}}</p>
+   <p> {{user.last_name}}</p>
+   <p>{{user.username}}</p>
+   <p> {{user.address_line1}}</p>
+   <p> {{user.city}}</p>
+   <p> {{user.state}}</p>
+   <p> {{user.pincode}}</p>
+   <p> {{user.role}}</p>
+    </div>
+    </div>
+
+
+{% endblock content %}
